@@ -8,6 +8,9 @@
 body {
     background-color: rgb(244, 244, 244);
 }
+body::-webkit-scrollbar{
+    display: none;
+}
 
 .head {
     max-width: 100%;
@@ -292,9 +295,10 @@ a {
 .slider_container{
     /* padding: 0.5rem; */
     margin:0.5rem;
+    position: relative;
 }
 .slidewapper{
-    position: relative;
+    
     max-width: 100%;
 }
 .slider{
@@ -364,19 +368,68 @@ a {
   .nav_bar a:hover{
     opacity: 1;
   }
+  .left_right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 .left,.right{
+    position: absolute;
+    top: 31%;
     padding: 2rem 0.8rem;
     border: none;
     outline: none;
-    position: absolute;
-    top: 31%;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     cursor: pointer;
     max-width: 100%;
 }
 .right{
-    right:0;
+    right: 0;                                                   
+}
+.dot{
+    width: 7px;
+    height: 7px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0.43rem;
+    left: 46.3%;
+    animation: Dot 15s infinite 1s;
+}
+@keyframes Dot {
+    0%{
+        bottom: 0.43rem;
+        left: 46.3%;
+    }
+    14.28%{
+        bottom: 0.43rem;
+        left:47.3%;
+    }
+    28.56%{
+        bottom: 0.43rem;
+        left: 48.3%;
+    }
+    42.84%{
+        bottom: 0.43rem;
+        left: 49.3%;
+    }
+    57.12%{
+        bottom: 0.43rem;
+        left: 50.3%;
+    }
+    71.14%{
+        bottom: 0.43rem;
+        left: 51.3%;
+    }
+    85.68%{
+        bottom: 0.43rem;
+        left: 52.3%;
+    }
+    100%{
+        bottom: 0.43rem;
+        left: 53.3%;
+    }
 }
 .best_ele{
     width: 84%;
@@ -384,6 +437,12 @@ a {
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     background-color: #ffffff;
     margin:0.5rem;
+}
+.best_ele1{
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    background-color: #ffffff;
+    margin:0.5rem;
+    height:300px;
 }
 .ele_title{
     display: flex;
@@ -448,10 +507,8 @@ a {
     margin-top: 0.5rem;
 }
 .strip1{
+    /* max-width: 100%; */
     margin-top: 1rem;
-}
-.strip1 .best_ele{
-    width: 100%;
 }
 .discount img{
     width: 100%;
